@@ -23,16 +23,15 @@ const Contacts = () => {
       flex: 1,
     },
     {
-      field: "cost",
-      headerName: "Cost",
-      type: "number",
-      headerAlign: "left",
-      align: "left",
-      renderCell: (params) => {
-        <Typography color={colors.greenAccent[500]}>
-            ${params.rows.cost}
-        </Typography>
-      }
+        field: "cost",
+        headerName: "Cost",
+
+        renderCell: (params) => (
+            <Typography color={colors.greenAccent[500]}>
+                {params.value}
+            </Typography>
+        )
+    
     },
     {
         field: "phone",
